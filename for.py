@@ -12,7 +12,7 @@ Mostrar la suma.
 suma=0
 
 
-for contador in range (10): # rango de 10 é contado o numero 0, entao fica de 0-9 [0,1,2,3,4,5,6,7,8,9)
+for contador in range (10): # rango de 10 é contado (variable) que usa para contar, o numero 0, entao fica de 0-9 [0,1,2,3,4,5,6,7,8,9)
 #for contador in range (3): #[0,1,2)
 #for contador in range (1,10): #[1,2,3,4,5,6,7,8,9)
 #for contador in range (1,11): #[1,2,3,4,5,6,7,8,9,10)
