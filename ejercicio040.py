@@ -32,10 +32,10 @@ for numero in range(a,b+1): # se coloca b+1 porque não chegamos até o B, chega
     print(numero)
 
     suma += numero
-    if numero%2 == 0:
-        suma_pares += numero
+    if numero%2 == 0: # si o numero %2 é um numero par
+        suma_pares += numero # a suma de pares mais é igual ao numero
     else:
-        producto_impares *= numero
+        producto_impares *= numero # então o producto impares multiplicado por impares, o numero colocamos 1, porque é um numero neutro
 
 
 print(f"La suma es: {suma}")
