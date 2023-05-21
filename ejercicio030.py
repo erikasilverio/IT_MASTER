@@ -38,10 +38,10 @@ print("El costo del libro es: $", costo)
 
 """
 
-from random import randint # ingressar os dados do sistema
+from random import randint # Desde o modolu random importarme solamente el randint ,ingressar os dados do sistema
 
-terminar = bool(False)
-while not terminar: # mientras nao terminar
+terminar = bool(False) #booleano , tpo logico verdadeiro ou falso
+while not terminar: # mientras nao terminar , continuar..
 
     a = randint(1,100)
     b = randint(1,100)
@@ -55,6 +55,6 @@ while not terminar: # mientras nao terminar
         resultado = f"{b} es div. por {a} ==> {es_divisible}"
     
     if es_divisible == True: # se rompe el ciclo y se termina
-        terminar = True
+        terminar = True #para terminar quando seja TRUE
 
     print(resultado)
