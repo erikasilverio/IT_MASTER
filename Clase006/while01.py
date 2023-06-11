@@ -34,9 +34,7 @@ sumador = 0
 numero = int(input("Numero: "))
 
 while numero != 0:
-
-
-# DURANTE EL PROCESO (PARA CADA DTOS)
+        # DURANTE EL PROCESO (PARA CADA DTOS)
 
     sumador += numero # sumador = sumador + numero
     numero = int(input("Numero: "))
