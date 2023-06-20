@@ -17,6 +17,6 @@ for contador in range (10): # rango de 10 é contado (variable) que usa para con
 #for contador in range (1,10): #[1,2,3,4,5,6,7,8,9)
 #for contador in range (1,11): #[1,2,3,4,5,6,7,8,9,10)
     #print(contador) # eso es un ciclo exacto
-    numero = int(input("Numero:"))
+    numero = int(input("Numero: "))
     suma += numero # soma e o acumulador para somar
 print(f"La suma es: {suma}")
