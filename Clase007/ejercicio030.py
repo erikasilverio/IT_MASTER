@@ -1,6 +1,7 @@
 """
 Ejercicio 030
-Escribir un programa que permita al usuario generar dos números enteros. La computadora debe indicar si el mayor es divisible por el menor.
+Escribir un programa que permita al usuario generar dos números enteros.
+La computadora debe indicar si el mayor es divisible por el menor.
 
 (Un número entero a es divisible por un número entero b cuando el resto de la división entre a y b es 0)
 
@@ -21,13 +22,15 @@ print("El costo del libro es: $", costo)
 
 
 ----------------------
+    Uma forma de resolver:
+
 
     a = randint(1,100)
     b = randint(1,100)
     
 
     if a > b:
-        resultado = f"{a} es div. por {b} ==> {(a%b) == 0}"
+        resultado = f"{a} es div. por {b} ==> {(a%b) == 0}"  ( uma candena com formato(f) )
     else: 
         resultado = f"{b} es div. por {a} ==> {(b%a) == 0}"
 
@@ -37,6 +40,9 @@ print("El costo del libro es: $", costo)
 
 
 """
+
+# outra maneira , agora usando random.
+
 
 from random import randint # Desde o modolu random importarme solamente el randint ,ingressar os dados do sistema
 

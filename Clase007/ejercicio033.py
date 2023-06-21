@@ -26,7 +26,7 @@ else: #ENTONCES
 # o que significa 10.2f => 10 é a quantidade de espaço, seria o largo do numero e 2f => seriam os decimais
 # IMPORTE MENOS O DESCUENTO, EN LO FORMATO 10.2F - SON 10 NUMERO Y DOS DECIMALES
 pantalla = f"""                                     
-Importe:   {importe:10.2f}                          
+Importe:   {importe:10.2f}               # 0 numero 10 a quantidade de numero que vai imprimir e o 2f, quantos numero apos a virgula            
 descuento: {descuento:10.2f}
 -----------------------------
 Imp.Total: {importe-descuento:10.2f} 

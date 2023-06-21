@@ -42,4 +42,3 @@ for comida in range(CANTIDAD_TANDAS):
     print(f"Promedio por tanda: {total/CANTIDAD_TANDAS}")
     print(f"La comida mayor: {la_comida_mayor} con {mayor_kg}")
 
-
