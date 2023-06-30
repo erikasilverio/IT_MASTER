@@ -58,13 +58,13 @@ for f in range(FILAS):
 print()
 
 
+
 print("Letra X")
 
 for f in range(FILAS):
     for c in range(COLUNAS):
-        if  f == c :
-            print('*', end='')
-
+        if f == c or f + c == FILAS - 1:
+            print('*',end='')
         else:
             print(' ',end='')
     print()
