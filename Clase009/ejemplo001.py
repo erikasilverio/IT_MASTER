@@ -8,20 +8,19 @@ MOSTRA LA SUMA DE CADA SUBSEQUENCIA (SUB)
 
 numero = int(input("Numero: "))
 
-while numero != -1:
-    suma_sub = 0
+while numero != -1:  #mistras que o numero seja distindo a -1.  (antes)
+    suma_sub = 0  
 
 
-    while numero != 0:
+    while numero != 0:  #mienstras que o numero sea distinto de 0.
        
         suma_sub += numero
-        numero = int(input("Numero: "))
-
+        numero = int(input("Numero: "))  # (durante)
 
     # FIN DEL WHILE
 
     print(f"Suma: {suma_sub}")
-    numero = int(input("Numero: "))
+    numero = int(input("Numero: "))  # despues que mostre um numwro , volte a me mostrar outro(despues)
 
 # FIN DEL WHILE
 
