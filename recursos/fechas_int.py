@@ -284,6 +284,13 @@ def nombre_del_dia_semana(numero_dia_semana):
     Retorna el nombre del día de la semana para un número de día de la semana.
     """
 
+    dias_semana = ( 'Domingo','Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado')    # TUPLA
+    #                   0        1        2          3           4           5         6
+    return dias_semana[numero_de_dia_semana]  
+
+    """
+    OTRA MANERA
+
     nombre_dia_espanol = ""
     if numero_dia_semana == 0:
         nombre_dia_espanol = "Domingo"
@@ -301,6 +308,8 @@ def nombre_del_dia_semana(numero_dia_semana):
         nombre_dia_espanol = "Sábado"
 
     return nombre_dia_espanol
+"""
+
 
 def test():
     print(f"\n\n\nEsta compilando la prueba de un modulo de funciones de fecha (AAAAMMDD)!\n\n")
