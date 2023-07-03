@@ -1,4 +1,5 @@
 import sys
+
 sys.path.append("recursos/") # Agregar al path la ruta donde se encuentran los modulos
 from utilidades import *
 from fechas_int import *
