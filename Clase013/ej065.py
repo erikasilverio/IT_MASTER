@@ -30,8 +30,8 @@ Al finalizar el pedido, se debe mostrar el monto total a pagar, el ítem más ca
 from os import system
 import sys
 sys.path.append("recursos/") # Agregar al path la ruta donde se encuentran los modulos
-from utilidades import *
-from fechas_int import *
+from utilidades_1_ import *
+from fechas_1_int import *
 
 
 def titulo(texto):
@@ -47,7 +47,8 @@ def menu(tupla_opciones):
         else:
             print(opcion.title())
 
-    return leer_entero_rango("Ingrese una opcion: ",1,8)
+    return leer_entero_rango("INGRESE UNA OPCION:",1,8)
+    
 
 
 TUPLA_OPCIONES = ("COMIDAS CACHITO", 
@@ -85,8 +86,6 @@ def main():
             pass
         elif op == 8:
             pass
-
-    
 
 
 main()
