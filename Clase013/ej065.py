@@ -29,7 +29,7 @@ Al finalizar el pedido, se debe mostrar el monto total a pagar, el ítem más ca
 """
 from os import system
 import sys
-sys.path.append("recursos/") # Agregar al path la ruta donde se encuentran los modulos
+sys.path.append("Clase013") # Agregar al path la ruta donde se encuentran los modulos
 from utilidades_1_ import *
 from fechas_1_int import *
 
