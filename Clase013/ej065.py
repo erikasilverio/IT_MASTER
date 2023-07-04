@@ -27,9 +27,7 @@ calcular el valor total antes de sumarlo al subtotal.
 Al finalizar el pedido, se debe mostrar el monto total a pagar, el ítem más caro y, si no se han seleccionado productos, mostrar un mensaje que diga "Pedido cancelado".
 
 """
-
 from os import system
-
 import sys
 sys.path.append("recursos/") # Agregar al path la ruta donde se encuentran los modulos
 from utilidades import *
