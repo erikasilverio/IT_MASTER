@@ -28,8 +28,66 @@ Al finalizar el pedido, se debe mostrar el monto total a pagar, el ítem más ca
 
 """
 
+from os import system
+
+import sys
+sys.path.append("recursos/") # Agregar al path la ruta donde se encuentran los modulos
+from utilidades import *
+from fechas_int import *
+
+
+def titulo(texto):
+                     # "".title().center(30)
+    return f"{'-'*30}\n{texto.title().center(30)}\n{'-'*30}"
+
+
+def menu(tupla_opciones):
+    system("cls")
+    for index,opcion in enumerate(tupla_opciones):
+        if index == 0:
+            print(titulo(opcion))
+        else:
+            print(opcion.title())
+
+    return leer_entero_rango("Ingrese una opcion: ",1,8)
+
+
+TUPLA_OPCIONES = ("COMIDAS CACHITO", 
+    "1) Combo 1: Hamburguesa, papas fritas y gaseosa - 1550",
+    "2) Combo 2: Hamburguesa con queso, papas fritas y gaseosa - 1650",
+    "3) Hamburguesa sola - 1300",
+    "4) Hamburguesa con queso - 1400",
+    "5) Gaseosa - 700",
+    "6) Postre - 600",
+    "7) Agregar aderezo - 100",
+    "8) Terminar"
+    )
+
 
 def main():
+    terminar = False
+    while not terminar:
+        op = menu(TUPLA_OPCIONES)
+        if op == 8 :
+            terminar = True
+        
+        elif op == 1:
+            pass
+        elif op == 2:
+            pass
+        elif op == 3:
+            pass
+        elif op == 4:
+            pass
+        elif op == 5:
+            pass
+        elif op == 6:
+            pass
+        elif op == 7:
+            pass
+        elif op == 8:
+            pass
+
     
 
 
