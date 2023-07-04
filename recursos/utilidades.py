@@ -1,4 +1,6 @@
 from os import system
+import sys
+
 def isint(str_numero):
     """
     Devuelve True si str_numero es un int, False en caso contrario
@@ -9,9 +11,9 @@ def isint(str_numero):
         return False
     return True
 
-def isfloat(str_numero):
+def isFloat(str_numero):
     """
-    Devuelve True si str_numero es un float, False en caso contrario
+    Devuelve True si str_nuimero es un float, False en caso contrario
     """
     try:
         float(str_numero)
@@ -19,60 +21,60 @@ def isfloat(str_numero):
         return False
     return True
 
-def leer_entero(mensaje):
+def leer_entero(msj):
     """
     Permite leer un entero desde el teclado
     """
-    todo_ok = False
+    todo_ok=False
     while not todo_ok:
-        cadena = input(mensaje)
+        cadena = input(msj)
         if isint(cadena):
             todo_ok = True
         else:
-            print(f"{cadena} No es un int.")    
+            print(f'{cadena} No es un entero.')
     return int(cadena)
 
-def leer_float(mensaje):
+def leer_float(msj):
     """
     Permite leer un float desde el teclado
     """
     todo_ok = False
     while not todo_ok:
-        cadena = input(mensaje)
-        if isfloat(cadena):
-            todo_ok = True
+        cadena = input(msj)
+        if isFloat(cadena):
+            todo_ok= True
         else:
-            print(f"{cadena} No es un float.")    
+            print(f'{cadena} No es un float.')
     return int(cadena)
 
-def leer_entero_rango(mensaje, minimo, maximo):
+def leer_entero_rango(msj,minimo,maximo):
     """
-    Permite leer un entero desde el teclado en un rango determinado
+    Permite leer un enetero desde el teclado en un rango determinado.
     """
     todo_ok = False
     while not todo_ok:
-        numero = leer_entero(mensaje)
+        numero = leer_entero(msj)
         if minimo <= numero <= maximo:
             todo_ok = True
         else:
-            print(f"{numero} No esta en el rango {minimo} a {maximo}.")    
+            print(f'{numero} No esta en el rango {minimo} a {maximo}.')
     return numero
 
-def leer_float_rango(mensaje, minimo, maximo):
+def leer_float_rango(msj, minimo, maximo):
     """
     Permite leer un float desde el teclado en un rango determinado
     """
     todo_ok = False
     while not todo_ok:
-        numero = leer_float(mensaje)
+        numero = leer_float(msj)
         if minimo <= numero <= maximo:
             todo_ok = True
         else:
-            print(f"{numero} No esta en el rango {minimo} a {maximo}.")    
+            print(f'{numero} No esta en el rango {minimo} a {maximo}')
     return numero
 
 
-def titulo(texto,largo):    
+def titulo(texto,largo):
     return f"{'-'*largo}\n{texto.title().center(largo)}\n{'-'*largo}"
 
 def obtener_largo_opcion_mas_larga(tupla_opciones):
@@ -86,18 +88,13 @@ def menu(tupla_opciones):
     largo = obtener_largo_opcion_mas_larga(tupla_opciones)
     system("cls")
     for index,opcion in enumerate(tupla_opciones):
-        if index == 0: 
+        if index == 0:
             print(titulo(opcion,largo))
         else:
             print(opcion.title())
     return leer_entero_rango("Ingrese una opcion: ",1,8)
-    
-def continua(texto_pregunta):
-    resp = input(f'Continua {texto_pregunta} [S/N]: ').upper()
-    if resp == 'S':
-        return True
-    return False
+
 
 
 if __name__ == '__name__':
-    print("Esto es un modulo no un programa")
+    print('Esto es un modulo no un programa.')

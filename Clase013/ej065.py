@@ -27,65 +27,109 @@ calcular el valor total antes de sumarlo al subtotal.
 Al finalizar el pedido, se debe mostrar el monto total a pagar, el ítem más caro y, si no se han seleccionado productos, mostrar un mensaje que diga "Pedido cancelado".
 
 """
-from os import system
+# from os import system  - importado a carpeta utilidades!!!!
+
 import sys
-sys.path.append("Clase013") # Agregar al path la ruta donde se encuentran los modulos
-from utilidades_1_ import *
-from fechas_1_int import *
+sys.path.append('recursos/') # Agregar al path la ruta donde se encuentran los modulos
+from utilidades import *
+from fechas_int import *
 
 
-def titulo(texto):
+
+
+# FOI COLOCADO EM UTILIZADES!!!
+
+# def titulo(texto,largo):
                      # "".title().center(30)
-    return f"{'-'*30}\n{texto.title().center(30)}\n{'-'*30}"
+  #  return f"{'-'*largo}\n{texto.title().center(largo)}\n{'-'*largo}"  # acomoda o menu en la opcion mas larga
+
+# def obtener_largo_opcion_mas_larga(tupla_opciones):
+  #  maximo_largo = -float('inf')
+   # for i,texto in enumerate(tupla_opciones):
+    #    if len(texto) > maximo_largo:
+     #       maximo_largo = len(texto)
+   # return maximo_largo
 
 
-def menu(tupla_opciones):
-    system("cls")
-    for index,opcion in enumerate(tupla_opciones):
-        if index == 0:
-            print(titulo(opcion))
-        else:
-            print(opcion.title())
 
-    return leer_entero_rango("INGRESE UNA OPCION:",1,8)
-    
+
+# def menu(tupla_opciones):
+  #  largo = obtener_largo_opcion_mas_larga(tupla_opciones)
+   # system("cls")
+   # for index,opcion in enumerate(tupla_opciones):
+    #    if index == 0:
+     #       print(titulo(opcion,largo))
+      #  else:
+       #     print(opcion.title())
+
+  #  return leer_entero_rango("INGRESE UNA OPCION:",1,8)
+
+
 
 
 TUPLA_OPCIONES = ("COMIDAS CACHITO", 
-    "1) Combo 1: Hamburguesa, papas fritas y gaseosa - 1550",
-    "2) Combo 2: Hamburguesa con queso, papas fritas y gaseosa - 1650",
-    "3) Hamburguesa sola - 1300",
-    "4) Hamburguesa con queso - 1400",
-    "5) Gaseosa - 700",
-    "6) Postre - 600",
-    "7) Agregar aderezo - 100",
+    "1) Combo 1: Hamburguesa, papas fritas y gaseosa - $1550",
+    "2) Combo 2: Hamburguesa con queso, papas fritas y gaseosa - $1650",
+    "3) Hamburguesa sola - $1300",
+    "4) Hamburguesa con queso - $1400",
+    "5) Gaseosa - $700",
+    "6) Postre - $600",
+    "7) Agregar aderezo - $100",
     "8) Terminar"
     )
 
+TUPLA_PRECIOS = (0,1550.50,1650.25,1300.0,1400.8,700,600,100)
+            #    0       1    2       3     4      5   6   7
 
 def main():
-    terminar = False
-    while not terminar:
+    terminar_pedido = False
+    while not terminar_pedido:
         op = menu(TUPLA_OPCIONES)
         if op == 8 :
-            terminar = True
+            terminar_pedido = True
         
         elif op == 1:
-            pass
+            cantidad = leer_entero("Cantidad: ")
+            importe = TUPLA_PRECIOS[op] * cantidad
+            print("Importe", importe)
+            system("pause")
         elif op == 2:
-            pass
+            cantidad = leer_entero("Cantidad: ")
+            importe = TUPLA_PRECIOS[op] * cantidad
+            print("Importe", importe)
+            system("pause")
         elif op == 3:
-            pass
+            cantidad = leer_entero("Cantidad: ")
+            importe = TUPLA_PRECIOS[op] * cantidad
+            print("Importe", importe)
+            system("pause")
         elif op == 4:
-            pass
+            cantidad = leer_entero("Cantidad: ")
+            importe = TUPLA_PRECIOS[op] * cantidad
+            print("Importe", importe)
+            system("pause")
         elif op == 5:
-            pass
+            cantidad = leer_entero("Cantidad: ")
+            importe = TUPLA_PRECIOS[op] * cantidad
+            print("Importe", importe)
+            system("pause")
         elif op == 6:
-            pass
+            cantidad = leer_entero("Cantidad: ")
+            importe = TUPLA_PRECIOS[op] * cantidad
+            print("Importe", importe)
+            system("pause")
         elif op == 7:
-            pass
+            cantidad = leer_entero("Cantidad: ")
+            importe = TUPLA_PRECIOS[op] * cantidad
+            print("Importe", importe)
+            system("pause")
         elif op == 8:
-            pass
+            cantidad = leer_entero("Cantidad: ")
+            importe = TUPLA_PRECIOS[op] * cantidad
+            print("Importe", importe)
+            system("pause")
+
+    return 
 
 
 main()
