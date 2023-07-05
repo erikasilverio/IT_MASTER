@@ -94,6 +94,12 @@ def menu(tupla_opciones):
             print(opcion.title())
     return leer_entero_rango("Ingrese una opcion: ",1,8)
 
+def continua(texto_pregunta):
+    resp = input(f'Continua {texto_pregunta} [S/N]: ').upper()
+    if resp == 'S':
+        return True
+    return False
+
 
 
 if __name__ == '__name__':

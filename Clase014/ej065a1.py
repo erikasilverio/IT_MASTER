@@ -20,7 +20,10 @@ from utilidades import *
 from fechas_int import *
 
 
-TUPLA_OPCIONES = ("COMIDAS CACHITO" +"   "+str_fecha(obtener_fecha_actual()),
+TITULO = "COMIDAS CACHITO" +"   "+str_fecha(obtener_fecha_actual())
+
+
+TUPLA_OPCIONES = (TITULO,
     "1) Combo 1: Hamburguesa, papas fritas y gaseosa - $1550",
     "2) Combo 2: Hamburguesa con queso, papas fritas y gaseosa - $1650",
     "3) Hamburguesa sola - $1300",
@@ -33,75 +36,60 @@ TUPLA_OPCIONES = ("COMIDAS CACHITO" +"   "+str_fecha(obtener_fecha_actual()),
 
 TUPLA_PRECIOS = (0,1550.5,1650.25,1300.0,1400.8,700,600,100)
               #  0,  1       2       3      4    5   6   7
+
+def proc_un_pedido(op):
+    
+    cantidad = leer_entero(f"{TUPLA_OPCIONES[op]} Cantidad: ")      
+    importe = TUPLA_PRECIOS[op] * cantidad         
+    print(f"Importe {importe}")                
+    
+    system("pause")
+    return (TUPLA_OPCIONES[op],cantidad,importe)
+
+
+
+
+def imprimir_pedido(tupla_pedidos,nro_pedido):
+    nro_pedido += 1
+    system("cls")
+    print(titulo("COMIDAS CACHITO",70))
+    print(f"Pedido: {nro_pedido} - {str_fecha(obtener_fecha_actual())}")
+    print("-"*70)
+    print(f"{'Producto':30s} {'Cantidad':8s} {'Precio':10s} {'Total':10s}")
+    print("-"*70)
+    total_pedido  = 0
+    for tupla in tupla_pedidos:
+        total = tupla[1] * tupla[2]
+        total_pedido += total
+        print(f"{tupla[0][:30]:30s} {tupla[1]:8d} {tupla[2]:10.2f} {total:10.2f}")
+    print("-"*70)    
+    print(f"Total Pedido: {total_pedido:47.2f}")
+    print("-"*70)
+    system("pause")
+    
+
+
+
 def main():
     terminar_proceso = False
     nro_pedido = 0
-    while not terminar_proceso:
+    while not terminar_proceso == False:
         tupla_pedidos = ()
         terminar_pedido = False
-        total_pedido = 0
         while not terminar_pedido:
-            op = menu(TUPLA_OPCIONES)
-            if op == 1:
-                cantidad = leer_entero(f"{TUPLA_OPCIONES[op]} Cantidad: ")      
-                importe = TUPLA_PRECIOS[op] * cantidad         
-                print(f"Importe {importe}")                
-                tupla_pedidos += ((TUPLA_OPCIONES[op],cantidad,importe),)
-                system("pause")
-            elif op == 2:
-                cantidad = leer_entero(f"{TUPLA_OPCIONES[op]} Cantidad: ")      
-                importe = TUPLA_PRECIOS[op] * cantidad         
-                print(f"Importe {importe}")                
-                tupla_pedidos += ((TUPLA_OPCIONES[op],cantidad,importe),)
-                system("pause")
-            elif op == 3:
-                cantidad = leer_entero(f"{TUPLA_OPCIONES[op]} Cantidad: ")      
-                importe = TUPLA_PRECIOS[op] * cantidad         
-                print(f"Importe {importe}")                
-                tupla_pedidos += ((TUPLA_OPCIONES[op],cantidad,importe),)
-                system("pause")
-            elif op == 4:
-                cantidad = leer_entero(f"{TUPLA_OPCIONES[op]} Cantidad: ")      
-                importe = TUPLA_PRECIOS[op] * cantidad         
-                print(f"Importe {importe}")                
-                tupla_pedidos += ((TUPLA_OPCIONES[op],cantidad,importe),)
-                system("pause")
-            elif op == 5:
-                cantidad = leer_entero(f"{TUPLA_OPCIONES[op]} Cantidad: ")      
-                importe = TUPLA_PRECIOS[op] * cantidad         
-                print(f"Importe {importe}")                
-                tupla_pedidos += ((TUPLA_OPCIONES[op],cantidad,importe),)
-                system("pause")
-            elif op == 6:
-                cantidad = leer_entero(f"{TUPLA_OPCIONES[op]} Cantidad: ")      
-                importe = TUPLA_PRECIOS[op] * cantidad         
-                print(f"Importe {importe}")                
-                tupla_pedidos += ((TUPLA_OPCIONES[op],cantidad,importe),)
-                system("pause")
-            elif op == 7:
-                cantidad = leer_entero(f"{TUPLA_OPCIONES[op]} Cantidad: ")      
-                importe = TUPLA_PRECIOS[op] * cantidad         
-                print(f"Importe {importe}")                
-                tupla_pedidos += ((TUPLA_OPCIONES[op],cantidad,importe),)
-                system("pause")
-            elif op == 8:
+
+            op = menu(TUPLA_OPCIONES)              # TUPLA_OPCIONES ES UN PARAMETRO, ES IMUTABLE
+            if op != 8:                  
+                tupla_pedidos += (proc_un_pedido(op),)
+                
+            else:
                 if len(tupla_pedidos) > 0:
                     nro_pedido += 1
-                    system("cls")
-                    print(titulo("COMIDAS CACHITO",70))
-                    print(f"Pedido: {nro_pedido} - {str_fecha(obtener_fecha_actual())}")
-                    print("-"*70)
-                    print(f"{'Producto':30s} {'Cantidad':8s} {'Precio':10s} {'Total':10s}")
-                    print("-"*70)
-                    total_pedido  = 0
-                    for tupla in tupla_pedidos:
-                        total = tupla[1] * tupla[2]
-                        total_pedido += total
-                        print(f"{tupla[0][:30]:30s} {tupla[1]:8d} {tupla[2]:10.2f} {total:10.2f}")
-                    print("-"*70)    
-                    print(f"Total Pedido: {total_pedido:47.2f}")
-                    print("-"*70)
-                    system("pause")
+                    imprimir_pedido(tupla_pedidos,nro_pedido)
+
                 terminar_pedido = True
 
+        # Fin del while
+        terminar_proceso = not continua("Ingresando Datos")
+        
 main()
