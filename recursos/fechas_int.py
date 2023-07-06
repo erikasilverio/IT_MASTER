@@ -41,34 +41,42 @@ Fecha: 06/06/2023
 """
 
 import random  # importo el modulo random
-# from random import *
-# import random as r
-
 import datetime  # importo el modulo datetime
-
 
 def isfecha_valida(aaaammdd):
     """
     Retorna True si la fecha es valida, False en caso contrario
 
+    Args:
+        aaaammdd (int): Fecha en formato AAAAMMDD.
+
+    Returns:
+        bool: True si la fecha es valida, False en caso contrario
     """
+    
     a = el_anio(aaaammdd)
     m = el_mes(aaaammdd)
     d = el_dia(aaaammdd)
-
+    
     if m < 1 or m > 12:
         return False
     
-    cantidad_dias =  obtener_cantidad_dias_del_mes(m, a)
+    cantidad_dias = obtener_cantidad_dias_del_mes(m, a)
     if d < 1 or d > cantidad_dias:
         return False
-    
+        
     return True
 
 
 def isbisiesto(anio):
     """
     Retorna True si el año es bisiesto, False en caso contrario
+
+    Args:
+        anio (int): Año a evaluar
+
+    Returns:
+        bool: True si el año es bisiesto, False en caso contrario    
     """
     return anio % 4 == 0 and anio % 100 != 0 or anio % 400 == 0
 
@@ -76,6 +84,14 @@ def isbisiesto(anio):
 def obtener_cantidad_dias_del_mes(mes, anio):
     """
     Retorna la cantidad de dias del mes indicado en el año indicado
+
+    Args:
+        mes (int): Número de mes
+        anio (int): Año 
+
+    Returns:
+        int: Cantidad de dias del mes indicado en el año indicado    
+
     """
     cantidad = 31
     if mes in (4, 6, 9, 11):
@@ -85,6 +101,7 @@ def obtener_cantidad_dias_del_mes(mes, anio):
             cantidad = 29
         else:
             cantidad = 28
+    
     return cantidad
 
 
@@ -92,6 +109,13 @@ def crear_fecha(dia, mes, anio):
     """
     Retorna una fecha con el formato AAAAMMDD
 
+    Args:
+        dia (int): Día
+        mes (int): Mes
+        anio (int): Año
+
+    Returns:
+        int: Fecha en formato AAAAMMDD    
     """
     return (anio*10000) + (mes*100) + dia  # AAAAMMDD
 
@@ -100,6 +124,8 @@ def obtener_fecha_actual():
     """
     Retorna la fecha actual del sistema en formato AAAAMMDD.
 
+    Returns:
+        int: Fecha actual del sistema en formato AAAAMMDD.
     """
     # Obtiene la fecha y hora actual como un objeto datetime
     fecha_actual = datetime.datetime.now().date()
@@ -115,7 +141,15 @@ def obtener_fecha_actual():
 
 def fecha_mas_dias(aaaammdd, cantidad_dias):
     """
-    Retorna una fecha con la cantidad de dias indicada a partir de la fecha indicada
+    Retorna una fecha con la cantidad de dias indicada a partir de la fecha
+
+    Args:
+        aaaammdd (int): Fecha en formato AAAAMMDD
+        cantidad_dias (int): Cantidad de dias a sumar
+
+    Returns:
+        int: Fecha con la cantidad de dias indicada a partir de la fecha    
+
     """
     a = el_anio(aaaammdd)
     m = el_mes(aaaammdd)
@@ -135,6 +169,13 @@ def fecha_mas_dias(aaaammdd, cantidad_dias):
 def fecha_menos_dias(aaaammdd, cantidad_dias):
     """
     Retorna una fecha con la cantidad de dias indicada a partir de la fecha indicada
+
+    Args:
+        aaaammdd (int): Fecha en formato AAAAMMDD
+        cantidad_dias (int): Cantidad de dias a restar
+
+    Returns:
+        int: Fecha con la cantidad de dias indicada a partir de la fecha indicada
     """
     a = el_anio(aaaammdd)
     m = el_mes(aaaammdd)
@@ -154,6 +195,12 @@ def fecha_menos_dias(aaaammdd, cantidad_dias):
 def obtener_fecha_random(anio):
     """
     Genera una fecha aleatoria en el rango del año indicado
+
+    Args:
+        anio (int): Año
+
+    Returns:
+        int: Fecha aleatoria en el rango del año indicado
     """
 
     mes = random.randint(1, 12)
@@ -167,6 +214,12 @@ def el_anio(aaaammdd):
     Retorna el año de una fecha con el formato AAAAMMDD
 
     AAAA <== |MMDD
+
+    Args:
+        aaaammdd (int): Fecha en formato AAAAMMDD
+
+    Returns:    
+        int: Año de una fecha con el formato AAAAMMDD
     """
     return aaaammdd//10000  # AAAA <== |MMDD
 
@@ -176,6 +229,12 @@ def el_mes(aaaammdd):
     Retorna el mes de una fecha con el formato AAAAMMDD
 
     AAAA| ==> MM <== |DD
+
+    Args:
+        aaaammdd (int): Fecha en formato AAAAMMDD
+
+    Returns:
+        int: Mes de una fecha con el formato AAAAMMDD    
     """
     return (aaaammdd//100) % 100  # AAAA| ==> MM <==|DD
 
@@ -185,6 +244,12 @@ def el_dia(aaaammdd):
     Retorna el dia de una fecha con el formato AAAAMMDD
 
     AAAAMM| ==> DD
+
+    Args:
+        aaaammdd (int): Fecha en formato AAAAMMDD
+
+    Returns:
+        int: Dia de una fecha con el formato AAAAMMDD
     """
     return aaaammdd % 100  # AAAAMM| ==> DD
 
@@ -197,51 +262,25 @@ def nombre_del_mes(mes):
         mes (int): Número de mes
 
     Returns:
-        str: Nome del mes indicado
+        str: Nombre del mes indicado
     """
+    meses = ("","Enero", "Febrero", "Marzo", 
+             "Abril", "Mayo", "Junio", 
+             "Julio","Agosto", "Septiembre", 
+             "Octubre", "Noviembre", "Diciembre")
 
-    meses = ("", "Enero","Febero","Marzo",
-             "Abril","Mayo","Junio",
-             "Julio","Agosto","Septiembre",
-             "Octubre","Noviembre","Diciembre")
-    
     return meses[mes]
-    
-    
-    
-    
-    # nombre = ""
-    # if mes == 1:
-      #  nombre = "Enero"
-    # elif mes == 2:
-     #   nombre = "Febrero"
-    # elif mes == 3:
-     #   nombre = "Marzo"
-    # elif mes == 4:
-     #   nombre = "Abril"
-    # elif mes == 5:
-     #   nombre = "Mayo"
-    # elif mes == 6:
-     #   nombre = "Junio"
-    # elif mes == 7:
-     #   nombre = "Julio"
-    # elif mes == 8:
-     #   nombre = "Agosto"
-    # elif mes == 9:
-     #   nombre = "Septiembre"
-    # elif mes == 10:
-     #   nombre = "Octubre"
-    # elif mes == 11:
-     #   nombre = "Noviembre"
-    # elif mes == 12:
-     #   nombre = "Diciembre"
-
-    # return nombre
 
 
 def str_fecha(aaaammdd):
     """
     Retorna una cadena con la fecha en formato DD/MM/AAAA
+
+    Args:
+        aaaammdd (int): Fecha en formato AAAAMMDD
+
+    Returns:
+        str: Fecha en formato DD/MM/AAAA
     """
     
     return f"{el_dia(aaaammdd):02}/{el_mes(aaaammdd):02}/{el_anio(aaaammdd):04}"
@@ -250,6 +289,12 @@ def str_fecha(aaaammdd):
 def str_fecha_larga(aaaammdd):
     """
     Retorna una cadena con la fecha en formato DD de "NOMBRE DEL MES" de AAAA
+
+    Args:
+        aaaammdd (int): Fecha en formato AAAAMMDD
+
+    Returns:
+        str: Fecha en formato DD de "NOMBRE DEL MES" de AAAA
     """
     
     d = el_dia(aaaammdd)
@@ -262,6 +307,12 @@ def str_fecha_larga(aaaammdd):
 def str_fecha_dia(aaaammdd):
     """
     Retorna una cadena con la fecha en formato "NOMBRE_DIA" dia de "NOMBRE DEL MES" de AAAA
+
+    Args:
+        aaaammdd (int): Fecha en formato AAAAMMDD
+
+    Returns:
+        str: Fecha en formato "NOMBRE_DIA" dia de "NOMBRE DEL MES" de AAAA
     """
 
     nombre_dia = nombre_del_dia_semana(numero_de_dia_semana(aaaammdd))    
@@ -274,7 +325,12 @@ def numero_de_dia_semana(aaaammdd):
     """
     Retorna el número del día de la semana para una fecha en formato AAAAMMDD.
     El domingo se representa con el número 0, y el sábado con el número 6.
-    
+
+    Args:
+        aaaammdd (int): Fecha en formato AAAAMMDD
+
+    Returns:
+        int: Número del día de la semana
     """
 
     # Convierte la fecha en formato AAAAMMDD a un objeto datetime
@@ -299,34 +355,18 @@ def numero_de_dia_semana(aaaammdd):
 def nombre_del_dia_semana(numero_dia_semana):
     """
     Retorna el nombre del día de la semana para un número de día de la semana.
+
+    El domingo se representa con el número 0, y el sábado con el número 6.
+
+    Args:
+        numero_dia_semana (int): Número del día de la semana
+
+    Returns:
+        str: Nombre del día de la semana
     """
-
-    dias_semana = ( 'Domingo','Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado')    # TUPLA
-    #                   0        1        2          3           4           5         6
-    return dias_semana[numero_de_dia_semana]  
-
-    """
-    OTRA MANERA
-
-    nombre_dia_espanol = ""
-    if numero_dia_semana == 0:
-        nombre_dia_espanol = "Domingo"
-    elif numero_dia_semana == 1:
-        nombre_dia_espanol = "Lunes"
-    elif numero_dia_semana == 2:
-        nombre_dia_espanol = "Martes"
-    elif numero_dia_semana == 3:
-        nombre_dia_espanol = "Miércoles"
-    elif numero_dia_semana == 4:
-        nombre_dia_espanol = "Jueves"
-    elif numero_dia_semana == 5:
-        nombre_dia_espanol = "Viernes"
-    elif numero_dia_semana == 6:
-        nombre_dia_espanol = "Sábado"
-
-    return nombre_dia_espanol
-"""
-
+    dias_semana = ( 'Domingo','Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado')
+    #                   0         1        2 
+    return dias_semana[numero_dia_semana]
 
 def test():
     print(f"\n\n\nEsta compilando la prueba de un modulo de funciones de fecha (AAAAMMDD)!\n\n")
