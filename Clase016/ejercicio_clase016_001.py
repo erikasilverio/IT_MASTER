@@ -17,9 +17,7 @@ def llenar_desde_archivo(nombre_archivo:str) -> list:
 
 
 
-def mostrar_lista(lista:list) -> None:
-    
-
+def mostrar_lista(lista:list) -> None: 
     for indice,dato in enumerate(lista):
         print(f"Lista[{indice}] = {dato}")
 
