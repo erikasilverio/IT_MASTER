@@ -8,6 +8,7 @@ def llenar_desde_archivo(nombre_archivo):
     archivo = open(file=nombre_archivo,mode='r',encoding='utf-8')
 
     linea = archivo.readline()
+    
     while linea != '':
         print(linea)
 
