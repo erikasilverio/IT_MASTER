@@ -192,51 +192,34 @@ def el_dia(aaaammdd):
 def nombre_del_mes(mes):
     """
     Retorna el nombre del mes indicado
-
-    Args:
-        mes (int): Número de mes
-
-    Returns:
-        str: Nome del mes indicado
     """
+    nombre = ""
+    if mes == 1:
+        nombre = "Enero"
+    elif mes == 2:
+        nombre = "Febrero"
+    elif mes == 3:
+        nombre = "Marzo"
+    elif mes == 4:
+        nombre = "Abril"
+    elif mes == 5:
+        nombre = "Mayo"
+    elif mes == 6:
+        nombre = "Junio"
+    elif mes == 7:
+        nombre = "Julio"
+    elif mes == 8:
+        nombre = "Agosto"
+    elif mes == 9:
+        nombre = "Septiembre"
+    elif mes == 10:
+        nombre = "Octubre"
+    elif mes == 11:
+        nombre = "Noviembre"
+    elif mes == 12:
+        nombre = "Diciembre"
 
-    meses = ("", "Enero","Febero","Marzo",
-             "Abril","Mayo","Junio",
-             "Julio","Agosto","Septiembre",
-             "Octubre","Noviembre","Diciembre")
-    
-    return meses[mes]
-    
-    
-    
-    
-    # nombre = ""
-    # if mes == 1:
-      #  nombre = "Enero"
-    # elif mes == 2:
-     #   nombre = "Febrero"
-    # elif mes == 3:
-     #   nombre = "Marzo"
-    # elif mes == 4:
-     #   nombre = "Abril"
-    # elif mes == 5:
-     #   nombre = "Mayo"
-    # elif mes == 6:
-     #   nombre = "Junio"
-    # elif mes == 7:
-     #   nombre = "Julio"
-    # elif mes == 8:
-     #   nombre = "Agosto"
-    # elif mes == 9:
-     #   nombre = "Septiembre"
-    # elif mes == 10:
-     #   nombre = "Octubre"
-    # elif mes == 11:
-     #   nombre = "Noviembre"
-    # elif mes == 12:
-     #   nombre = "Diciembre"
-
-    # return nombre
+    return nombre
 
 
 def str_fecha(aaaammdd):
