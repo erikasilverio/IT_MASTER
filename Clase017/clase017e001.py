@@ -25,16 +25,10 @@ def obterne_desde_archivo(nombre_archivo:str) -> list:
                 lista.append(lista_numeros)
 
 
-
     except IOError as ex:
         print(f"Error al crear el archivo: ")
 
-
-
-
     return lista
-
-
 
 
 
@@ -44,7 +38,7 @@ def agregarMedia(nombre_archivo:str) -> None:
 
     lista = obterne_desde_archivo(nombre_archivo)
 
-    mostrar(lista)
+    
 
     try:
         with open(file=nombre_archivo,mode="w") as archivo:
@@ -57,8 +51,6 @@ def agregarMedia(nombre_archivo:str) -> None:
 
                 archivo.write(linea_texto[:-1] + '\n')
                 archivo.write(str  (  round  (  promedio,2 )  )  +"\n")
-
-
 
             
     except IOError as ex:
@@ -92,7 +84,7 @@ def generar_archivo(nombre_archivo:str,lineas_desde:int,linea_hasta:int,
 
 
 def main():
-    generar_archivo("Clase017/numeros.csv",1,10000,1,10,1,100)
+    generar_archivo("Clase017/numeros.csv",1,10,1,10,1,10)
     agregarMedia("Clase017/numeros.csv")
     # lista = "La casa grande".split()  --->  ['La', 'casa', 'grande']
     # lista = "1,7,8,9,4\n".split() # ['1,7,8,9,4']
