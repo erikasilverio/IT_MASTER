@@ -1,0 +1,101 @@
+dni,apellido,nombre,sexo,edad,provincia,localidad,calle,altura,ubicacion,mail
+24995769,Ocampo Rios,Diego Buenaventura Epifanio,M,56,La Pampa,Rancul,Humahuaca,3851,Dto 16,Diego@.com.ar
+29327562,Ruiz Lescano,Catalina,F,58,Tierra del Fuego,Ushuaia,San Vicente,5352,Dto 12,Catalina@.com
+23916784,Cabral Quintana,Adelfina,F,30,Río Negro,Mainqué,Guaraní,1072,DtoD,Adelfina@.com
+19780612,Contrera,Adelfa Benita,F,68,Santiago del Estero,Malbrán,Assunta,6989,DtoB,Adelfa@.com
+36007785,Gomez,Bernardo Conrado,M,45,Tierra del Fuego,Tolhuin,Chos Malal,7566,Dto 10,Bernardo@.com.ar
+27545417,Romano,Elinor Afra,F,57,Capital Federal,Villa Soldati,Santa Lucía,4095,Casa,Elinor@.com
+31766079,Ayala Zalazar,Guillermo Casimiro Hermes,M,36,Formosa,Palo Santo,El Hoyo,7343,Dto 5,Guillermo@.com.ar
+45498568,Ojeda Alonso,Adabella Elides,F,41,Capital Federal,Monte Castro,Aldea Epulef,6718,Casa,Adabella@.com.ar
+40613168,Mercado Maidana,Abercio Abenamar,M,21,Santa Fe,Ma. Juana,Sanagasta,8095,Casa,Abercio@.com.ar
+28193938,Franco,Enrique Emiliano Flavio,M,61,Tucumán,Villa Quinteros,Hipólito Yrigoyen,9325,Casa,Enrique@.com
+16755239,Leiva Ruiz,Casimira,F,41,San Luis,Saladillo,Laguna Limpia,2407,DtoH,Casimira@.com.ar
+47744242,Pacheco Ramos,África,F,48,Tucumán,Ranchillos,San Gerónimo,5268,Casa,África@.com
+32933792,Bustos,Baldomero Dan,M,28,San Luis,Villa del Carmen,Cipolletti,4476,Dto 4,Baldomero@.com.ar
+20253615,Palacios,Eduardo Heródoto,M,69,Salta,El Carril,Balvanera,5654,Casa,Eduardo@.com.ar
+28115083,Roldan Gil,Benigno,M,25,Buenos Aires,Benito Juárez,Pto. Santa Cruz,2973,Dto 12,Benigno@.com.ar
+37581943,Lescano,Belkis Elinor Adara,F,28,Salta,San Antonio,Arauco,7741,Casa,Belkis@.com
+39318578,Medina,Heródoto,M,44,Formosa,Misión San Fco.,Mariano I. Loza,4714,Casa,Heródoto@.com
+26134751,Figueroa Palavecino,Galileo Fernando,M,54,Tierra del Fuego,Río Grande,Aluminé,9189,Dto 13,Galileo@.com
+33602481,Pereira Rivas,Limay África,F,59,Chaco,Laguna Limpia,Árraga,1260,Casa,Limay@.com
+29770737,Salinas,Paloma,F,59,San Juan,Caucete,Cañada Rosquín,6433,Dto 5,Paloma@.com
+43348228,Oliva Gauna,Carla Mae Casimira,F,68,Misiones,F. Ameghino,Porteña,5096,DtoB,Carla@.com
+47264306,Maciel Garay,Acsa Paolina,F,44,Entre Ríos,Primero de Mayo,El Piquete,8259,DtoH,Acsa@.com.ar
+48632382,Baez Ibarra,Dardo Elio,M,71,Buenos Aires,Punta Indio,Sta. Rosa,263,Dto 9,Dardo@.com
+25648405,Altamirano,Casimira Lila Macrina,F,38,San Juan,Caucete,Nahuel Niyeu,1329,Casa,Casimira@.com
+16794999,Toledo Gallo,Bernardo Baldomero Hilario,M,74,Formosa,Laguna Naick Neck,San José de La Esquina,7442,Dto 9,Bernardo@.com
+42344200,Coria Castillo,Adelfina,F,43,Entre Ríos,San José,Fraga,7370,Dto 7,Adelfina@.com
+25789191,Figueroa,Adoración,F,40,Córdoba,La Serranita,Santa Rosa,2688,DtoA,Adoración@.com.ar
+34169614,Alvarez,Carla Adiventina,F,72,Córdoba,Quilino,Palmar Grande,7324,Casa,Carla@.com.ar
+46446273,Caceres Sotelo,Diadoría Eligia Madián,F,31,Catamarca,Los Varela,F.Mamerto Esquiú,1878,Dto 16,Diadoría@.com
+23041071,Caballero,Eloy Cándido Clemente,M,69,Mendoza,Guaymallén,San Juan,1199,Casa,Eloy@.com
+49708928,Palacios Aranda,Adona Adalis Carmela,F,58,Santa Cruz,Comandante Piedrabuena,Agronomía,4729,Casa,Adona@.com.ar
+37260466,Almiron Aquino,Delfín Felipe Abdo,M,26,Corrientes,Ramada Paso,Dolavón,4253,Casa,Delfín@.com
+35524590,Rodriguez,Diamela Adhara Agustina,F,23,Santiago del Estero,Villa Unión,Ramallo,915,Dto 10,Diamela@.com.ar
+29236289,Miño Funes,Adelma Agustina,F,61,La Rioja,Gral. A.V.Peñaloza,Payogasta,4003,DtoF,Adelma@.com
+21170881,Mansilla,Gastón Fernán,M,23,Salta,Saclantás,Felipe Yofré,5561,DtoC,Gastón@.com.ar
+44193304,Quinteros,Gonzalo Dan Abdiel,M,40,Salta,Río Piedras,Aarón Castellanos,9318,Dto 15,Gonzalo@.com
+39205853,Vega Flores,Hernán Casildo Darío,M,40,Buenos Aires,Tordillo,Chancaní,6935,Casa,Hernán@.com.ar
+42496765,Garay Vera,Gonzalo,M,34,San Luis,Anchorena,El Soberbio,888,Dto 4,Gonzalo@.com
+46695760,Valdez,Elisabet Denisa,F,34,Formosa,El Colorado,Yala,9654,DtoD,Elisabet@.com.ar
+39013741,Garay Zalazar,Abdo Carmelo,M,55,Entre Ríos,Ing. Sajaroff,Río Grande,1525,Dto 11,Abdo@.com
+24485320,Muñoz Herrera,Gonzalo Benicio Abdiel,M,48,Chubut,Cushamen,Ullum,4544,Dto 18,Gonzalo@.com.ar
+18084157,Veron,Denise Adelaine,F,43,Santa Fe,Pavón,Bernasconi,5571,Dto 4,Denise@.com
+26133355,Oliva Ruiz,Adabella,F,75,Río Negro,Cona Niyeu,Buta Ranquil,858,Casa,Adabella@.com
+28186043,Valenzuela Reynoso,Carlotta Maela Abril,F,62,Neuquén,Taquimilán,El Bobadal,6214,Dto 9,Carlotta@.com.ar
+31084720,Alarcon Monzon,Benigna Cataleya,F,38,La Rioja,Chamical,Arroyo Del Medio,7424,DtoF,Benigna@.com.ar
+18158147,Cortez,Enzo Félix Danilo,M,71,San Juan,Angaco,Pozo Borrado,2861,DtoH,Enzo@.com
+23611037,Aguero Gil,Carla Paola Lilen,F,63,Catamarca,Tapso,Nogolí,8871,Casa,Carla@.com.ar
+28456971,Campos Cortez,Casimiro Hilario,M,64,Catamarca,Puerta San José,Fiambalá,2809,Casa,Casimiro@.com.ar
+48690793,Alonso,Baldomero Hermán,M,53,Entre Ríos,San Justo,Rafael Calzada,3292,DtoH,Baldomero@.com
+45201520,Zarate Barrera,Bautista Dámaso,M,59,Córdoba,Tuclame,Videla,1896,Dto 5,Bautista@.com.ar
+31459612,Monzon Moyano,Elisabet Macrina Paolina,F,55,Entre Ríos,Col. Baylina,Nueve de Julio,1565,Dto 3,Elisabet@.com.ar
+26234290,Sandoval,Abinadi Eliina,F,26,Chaco,Villa Ángela,Nueva Pompeya,3312,Casa,Abinadi@.com.ar
+17713217,Robles Montenegro,Adabella Antonia,F,51,Capital Federal,Balvanera,F. Ameghino,5507,Dto 15,Adabella@.com.ar
+23478323,Sotelo Gomez,Madián Dhana Dialma,F,61,Santa Cruz,Perito Moreno,Empalme San Carlos,7395,Casa,Madián@.com
+45512640,Aranda Soto,Flavio Abencio,M,61,Santa Fe,Egusquiza,Las Heras,3223,Dto 9,Flavio@.com.ar
+32231620,Olivera,Baldomero David,M,42,Misiones,Col. Wanda,Gral. Belgrano,2274,DtoF,Baldomero@.com.ar
+17753183,Palavecino,Ceferino Bruno,M,66,Misiones,F. Ameghino,Paso Grande,1985,Dto 12,Ceferino@.com.ar
+34045971,Aguirre Escobar,Maela Catalina,F,33,La Rioja,Capital,Coronda,2721,Dto 9,Maela@.com.ar
+19487537,Paez,Dhana,F,20,Formosa,Misión San Fco.,La Quiaca,3494,DtoA,Dhana@.com.ar
+40226074,Calderon Altamirano,Adalgisa Adinoshka Abryl,F,59,Río Negro,Cervantes,Estanislao Del Campo,9417,Casa,Adalgisa@.com.ar
+46186794,Cuello,Baldomero,M,26,Córdoba,Potrero de Garay,Chamical,2534,DtoH,Baldomero@.com.ar
+47231330,Varela Varela,David Claudio Herodeo,M,27,Catamarca,Corral Quemado,Río Gallegos,5116,DtoB,David@.com
+19430419,Lezcano Robledo,Edmundo,M,54,Córdoba,Villa Yacanto,Nueve de Julio,2011,Dto 18,Edmundo@.com
+24200833,Lopez,Emilio Hermenegildo,M,74,Tucumán,San Andrés,Cnel. Du Graty,257,DtoE,Emilio@.com.ar
+24713484,Aranda,Fabricio,M,42,Santa Fe,Lucio V. Lopez,Sarah,7742,Dto 17,Fabricio@.com
+46106101,Villegas Caballero,Braian Abdullah,M,64,Buenos Aires,Rauch,Makallé,3916,DtoB,Braian@.com.ar
+45587191,Aranda,Elinor,F,44,Entre Ríos,Col. Avellaneda,Vélez Sarfield,1449,Dto 3,Elinor@.com
+30276881,Campos,Daniel Abenamar Fernán,M,21,Córdoba,Tuclame,Puerto Madero,457,DtoD,Daniel@.com
+29379689,Cruz,Enrique Gastón Abdias,M,55,Corrientes,Estación Torrent,San Blas de Los Sauces,9913,Casa,Enrique@.com
+48140778,Ocampo,Hermes Emilio Casildo,M,59,La Pampa,Sta. Rosa,San Justo,9150,Dto 16,Hermes@.com
+41886047,Sandoval Mendez,Madián,F,59,Capital Federal,Almagro,San Ignacio,766,Casa,Madián@.com
+47858490,Zarate Ferreyra,Abril,F,48,San Luis,Fraga,Chicoana,5431,DtoF,Abril@.com.ar
+15335948,Castro,Abe Heber,M,34,Río Negro,Las Grutas,Sampacho,4603,DtoC,Abe@.com
+42894564,Barrionuevo Diaz,Benito Benito Bernabé,M,44,Tucumán,Los Gómez,Formosa,5007,Dto 2,Benito@.com
+18760718,Gallardo Morales,Macaria,F,41,Mendoza,Luján,San Basilio,5924,DtoE,Macaria@.com.ar
+37255740,Zarate,Adoración,F,34,Chubut,Pto. Madryn,Berisso,9988,Dto 6,Adoración@.com
+32545664,Cordoba,Abir Belisa Abigail,F,38,Mendoza,Sta. Rosa,Tolhuin,8800,Dto 3,Abir@.com.ar
+15407192,Alegre Ortiz,Edgardo Félix Beltrán,M,25,Santa Fe,Centeno,Cerrito,8547,Casa,Edgardo@.com
+20028682,Dominguez Altamirano,Daniel,M,73,Jujuy,San Salvador,Capital,2708,Dto 13,Daniel@.com
+24736274,Salas,Afra Adona Elisa,F,60,Formosa,Mayor V. Villafañe,Algarrobo del Aguila,9269,Casa,Afra@.com
+32993179,Reynoso,David Fabián Edgardo,M,59,Capital Federal,Villa del Parque,Junín,5606,DtoH,David@.com
+40138652,Caballero Coria,Facundo Beltrán Feliciano,M,37,Chubut,Gan Gan,Graneros,425,Dto 8,Facundo@.com.ar
+18082763,Ocampo,Emiliano,M,32,Misiones,Loreto,Charata,9561,Casa,Emiliano@.com.ar
+35060876,Carabajal Castro,David Aberardo Fermín,M,55,Buenos Aires,Gral. Pacheco,Ullum,7310,Dto 13,David@.com
+28302646,Fuentes Ibañez,Abbott Claudio Abdon,M,30,Neuquén,Bajada del Agrio,Puesto del Marqués,1278,Casa,Abbott@.com.ar
+47331020,Sandoval,Carmina,F,23,Santa Fe,La Camila,Aldea San Miguel,4737,Dto 14,Carmina@.com.ar
+40942136,Gallo Escobar,Félix Hernán Delfín,M,46,Santiago del Estero,El Mojón,Arroyo del Medio,9109,DtoD,Félix@.com.ar
+40914992,Sanchez,Linet Eliané,F,51,Chaco,Campo Largo,Tinogasta,4201,DtoG,Linet@.com
+24812659,Rivero,Casimira Carlota Macarena,F,53,San Juan,Jachal,Banfield,3374,Dto 8,Casimira@.com
+30687019,Cejas,Claudio Genaro Hipólito,M,27,San Juan,Angaco,Rincón Treneta,9898,DtoG,Claudio@.com
+25152994,Rivero Figueroa,Delfín Fermín,M,42,La Pampa,Telén,Margarita Belén,6296,Casa,Delfín@.com
+47273782,Baez,Antonela,F,34,Misiones,Campo Ramón,Fighiera,942,DtoE,Antonela@.com
+42246349,Ojeda,Cándido Hermes,M,47,Chubut,Buen Pasto,Villa Quinteros,6956,Dto 3,Cándido@.com
+44176036,Fernandez,Macrina Eliana Benigna,F,42,San Luis,Juana Koslay,Villa Bosch,3166,Dto 16,Macrina@.com.ar
+48458039,Cordoba Mamani,Adelfina Cassandra Mabel,F,66,Santa Fe,Ing. Chanourdie,Villa Regina,7431,DtoA,Adelfina@.com.ar
+49716024,Carabajal,Carmelo Clemente,M,59,Santa Cruz,Las Heras,San José,5501,Dto 12,Carmelo@.com
+31794503,Moyano Alarcon,Abdas Heber,M,75,La Rioja,Gral. Ocampo,Florentino Ameghino,9720,Casa,Abdas@.com.ar
+25948043,Molina,Lindsay Adriana Lionela,F,47,Santa Cruz,Las Heras,Los Varela,2753,Dto 17,Lindsay@.com
+23784827,Rossi Diaz,Delfín Benito Dardo,M,39,Entre Ríos,Costa Uruguay N.,El Cholar,7055,DtoE,Delfín@.com.ar
+48605479,Cejas Bazan,Eligia Elida,F,38,Corrientes,Capital,Coyuco Cochico,4665,Casa,Eligia@.com.ar

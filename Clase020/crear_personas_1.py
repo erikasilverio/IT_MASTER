@@ -35,10 +35,10 @@ def obtener_dicc(nombre_archivo:str)->dict:
     
 
 def crear_lista_personas(cantidad_personas:int)->list:
-    femeninos = obtener_lista(ARCHIVO_NOMBRES_FEMENINIOS)
-    masculinos = obtener_lista(ARCHIVO_NOMBRES_MASCULINOS)
-    apellidos = obtener_lista(ARCHIVO_APELLIDOS)
-    dic_provincias = obtener_dicc(ARCHIVO_LOCALIDADES)
+    femeninos = obtener_lista(CAMINO + ARCHIVO_NOMBRES_FEMENINIOS)
+    masculinos = obtener_lista( CAMINO + ARCHIVO_NOMBRES_MASCULINOS)
+    apellidos = obtener_lista(CAMINO + ARCHIVO_APELLIDOS)
+    dic_provincias = obtener_dicc(CAMINO + ARCHIVO_LOCALIDADES)
     lista_personas = []
     titulos = "dni,apellido,nombre,sexo,edad,provincia,localidad,calle,altura,ubicacion,mail".split(',')
     for x in range(cantidad_personas):
@@ -72,7 +72,7 @@ def crear_archivo_csv(nombre_archivo:str,lista_personas:list[dict])->None:
 
 
 def main():
-    crear_archivo_csv(f"{CAMINO}personas.csv",crear_lista_personas(10))
+    crear_archivo_csv(f"{CAMINO}personas.csv",crear_lista_personas(100))
 
 
 main()
