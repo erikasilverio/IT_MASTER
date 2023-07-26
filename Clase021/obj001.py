@@ -11,10 +11,10 @@ class Persona:
         self.__edad:int = edad
 
     def setDni(self,dni:int)->None:
-        self.dni = dni
+        self.__dni = dni
 
     def getDni(self) -> int:
-        return self.dni
+        return self.__dni
     
 
     def setNombre(self,nombre:str)->None:
@@ -41,9 +41,18 @@ class Persona:
     
 
     
+    # if p1 == p
 
-    def __eq__(self, __value: object) -> bool:
-        pass
+
+    def __eq__(self, __otro_objeto: object) -> bool:
+        if not isinstance(__otro_objeto,Persona):
+            return False        
+        return self.getDni() == __otro_objeto.getDni()
+    
+    
+    def __ne__(self, __otro_obejeto: object) -> bool:
+        return not self.__eq__(__otro_obejeto)
+
 
 
 
@@ -52,13 +61,13 @@ class Persona:
 
 def main():
     p = Persona()
-    p.setDni(963546352)
+    p.setDni(9567854321)
     p.setEdad(35)
     p.setNombre("Raul")
 
     print(p)
 
-    p1 = Persona(96543142,"Juan",45)
+    p1 = Persona(9678656432,"Juan",35)
     print(p1)
     a = int()
     print(a)
@@ -69,14 +78,26 @@ def main():
         print(f'{p.getNombre()} esmayor de Edad')
 
     
-    if p1 == p:
+    if p1 == p1:
+        print("Iguales")
         print(str(p1))
         print(str(p))
         print(p1)
         print(p)
 
 
-    
+        p2 = p1
+
+        print("antes")
+        print(p1)
+        print(p2)
+
+
+        p1.setNombre("huahauhauahuahu")
+
+        print("depues") 
+        print(p1)
+        print(p2)
 
 
 
