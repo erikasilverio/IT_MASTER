@@ -1,0 +1,619 @@
+---------------------------------------------------------------------------------------------------------------
+Ejercicio 001
+
+Define una clase llamada Item, que se inicializa con el nombre del objeto y su peso como parámetros.
+
+Crea otra clase denominada Caja, la cual se inicializa con la capacidad máxima de peso que puede cargar.
+
+En la clase Caja, implementa los siguientes métodos:
+
+a. guardar_item(item): Este método recibe un objeto de la clase Item y lo almacena en el interior 
+de la caja, siempre y cuando haya suficiente capacidad disponible. Si la caja no tiene capacidad 
+para el nuevo objeto, debe lanzar una excepción.
+
+b. obtener_mas_pesado(): Este método devuelve el objeto Item que tenga el mayor peso almacenado en 
+la caja. Si no hay ningún objeto guardado, debe devolver None. Si hay varios objetos con el mismo 
+peso máximo, se puede devolver cualquiera de ellos.
+
+c. obtener_mas_liviano(): Este método devuelve el objeto Item que tenga el menor peso almacenado en la caja. 
+Si no hay ningún objeto guardado, debe devolver None. Si hay varios objetos con el mismo peso mínimo, se 
+puede devolver cualquiera de ellos.
+
+Recuerda que al implementar estas clases y métodos, deberás tener en cuenta la interacción entre ellas y 
+cómo se gestionan los objetos dentro de la caja según su peso y capacidad. 
+
+---------------------------------------------------------------------------------------------------------------
+Ejercicio 002
+
+Define una clase llamada Cuenta, que se inicializa con el nombre del titular de la cuenta como parámetro.
+
+Cada cuenta tendrá un saldo inicial de 0.
+
+La clase Cuenta debe tener los siguientes métodos:
+
+a. acreditar(monto, concepto): Este método permite acreditar un monto en la cuenta. Debe recibir como 
+parámetros el monto a acreditar y un concepto que describe la transacción (por ejemplo, "Sueldo", 
+"Venta", "Transferencia", etc.). 
+El monto acreditado se suma al saldo actual de la cuenta.
+
+b. transferir(monto, otra_cuenta): Este método permite transferir un monto desde la cuenta actual a 
+otra cuenta. Debe recibir como parámetros el monto a transferir y la instancia de otra cuenta (otra_cuenta) 
+a la cual se desea transferir el dinero. 
+Si la cuenta actual tiene saldo suficiente, se realiza la transferencia descontando el monto de la cuenta 
+actual y acreditándolo en la otra cuenta.
+
+c. extraer(monto, concepto): Este método permite extraer un monto de la cuenta. Debe recibir como parámetros 
+el monto a extraer y un concepto que describe la transacción (por ejemplo, "Compra", "Retiro", etc.). 
+El monto extraído se resta del saldo actual de la cuenta. Si el saldo no es suficiente para cubrir el monto 
+a extraer, se debe lanzar una excepción.
+
+d. saldo(): Este método devuelve el saldo actual de la cuenta.
+
+Recuerda que al implementar la clase Cuenta, debes tener en cuenta las validaciones necesarias para evitar 
+operaciones inválidas y mantener el correcto funcionamiento del sistema de cuentas
+
+A continuación, un ejemplo de cómo se podría utilizar la clase:
+
+# Creamos las cuentas para Pérez y López
+c = Cuenta('Pérez')
+d = Cuenta('López')
+
+# Acreditamos un sueldo de 100 a la cuenta de Pérez
+c.acreditar(100, 'Sueldo')
+
+# Transferimos 30 desde la cuenta de Pérez a la cuenta de López
+c.transferir(30, d)
+
+# Extraemos 60 de la cuenta de Pérez por compras
+c.extraer(60, 'Shopping')
+
+# Consultamos el saldo de la cuenta de Pérez
+saldo_perez = c.saldo()
+print("Saldo de la cuenta de Pérez:", saldo_perez)
+
+---------------------------------------------------------------------------------------------------------------
+Ejercicio 003
+
+Escribe una clase llamada Pelea, que se inicializa con dos cadenas de texto correspondientes al nombre del 
+retador y el defensor, en ese orden.
+
+La clase Pelea debe tener los siguientes métodos:
+
+cargar_resultado(puntos_retador, puntos_defensor): Este método recibe dos números enteros que representan 
+los puntos asignados al retador y al defensor, respectivamente. 
+Los puntos corresponden al resultado de la pelea. Si alguno de los puntos es negativo, se debe lanzar una 
+excepción. Este método debe guardar los puntos asignados para su posterior evaluación.
+
+obtener_ganador(): Este método devuelve el nombre del participante ganador, o la cadena "TIE" si hubo un empate. 
+Si no se ha cargado ningún resultado todavía, debe devolver None.
+
+La clase Pelea debe validar los parámetros recibidos y lanzar las excepciones correspondientes si no cumplen 
+con las condiciones.
+
+Clase HistorialDePeleas
+
+Escribe una clase llamada HistorialDePeleas.
+
+La clase HistorialDePeleas debe tener los siguientes métodos:
+
+cargar_pelea(pelea): Este método recibe un objeto de la clase Pelea y lo agrega al historial de peleas. 
+Si el objeto recibido no es de tipo Pelea, se debe lanzar una excepción.
+
+obtener_record(): Este método devuelve una cadena con el nombre del competidor que más peleas ganó en toda 
+la historia y cuántas fueron. Si no hay peleas registradas, debe devolver None. Si hay varios competidores 
+con la misma cantidad de peleas ganadas, se puede devolver cualquiera de ellos. Este método debe ser lo más 
+eficiente posible.
+
+Recuerda que al implementar estas clases y métodos, deberás tener en cuenta las validaciones necesarias y 
+asegurarte de que las excepciones se lancen adecuadamente en caso de incumplimiento de las condiciones.
+
+---------------------------------------------------------------------------------------------------------------
+Ejercicio 004
+
+Escribe una clase llamada Tatuaje, que se inicializa con tres parámetros: 
+
+- nombre (cadena de texto), 
+- area (entero mayor a 0), 
+- dolor (entero mayor a 0).
+
+Escribe una clase llamada Tatuador, que se inicializa con un parámetro nombre (cadena de texto). 
+La clase Tatuador debe tener el siguiente método:
+
+tatuar(brazo, tatuaje): Este método recibe dos objetos, brazo de la clase Brazo y tatuaje de la clase Tatuaje. 
+
+El método debe intentar tatuar el tatuaje en el brazo. 
+
+Si el brazo ya tiene un tatuaje con el mismo nombre, se debe lanzar una excepción ValueError con el mensaje 
+"Ya no te queda más lugar". 
+
+Si el brazo no tiene suficiente área para el tatuaje, se debe lanzar una excepción ValueError con el mensaje 
+"No te lo vas a bancar". 
+
+Si el tatuaje se puede tatuar en el brazo, se debe decrementar el área del brazo y el tatuaje debe quedar 
+registrado como parte de los tatuajes realizados por el tatuador.
+
+Escribe una clase llamada Brazo, que se inicializa con dos parámetros: 
+
+- area (entero mayor a 0) 
+- aguante (entero mayor a 0).
+
+Recuerda que al implementar estas clases y métodos, deberás asegurarte de validar los parámetros recibidos 
+y lanzar las excepciones correspondientes en caso de incumplimiento de las condiciones. Asimismo, el tatuador 
+debe llevar registro de los tatuajes realizados y mostrar correctamente esta información al ser consultado.
+
+---------------------------------------------------------------------------------------------------------------
+Ejercicio 005
+
+Escribe una clase llamada FacebookUser, que se inicializa con un parámetro nombre_usuario (cadena de texto) 
+correspondiente al nombre del usuario en Facebook.
+
+La clase FacebookUser debe tener los siguientes métodos:
+
+__init__(self, nombre_usuario): Constructor de la clase, que recibe el nombre del usuario y crea atributos 
+para almacenar los amigos y los posts en el muro del usuario.
+
+__str__(self): Método especial que devuelve el nombre del usuario al convertir el objeto a cadena de texto.
+
+publicar(self, post): Este método recibe un post (cadena de texto) y lo agrega al muro del usuario.
+
+agregar_amigo(self, otro_usuario): Este método recibe otro objeto de tipo FacebookUser (otro_usuario) 
+y lo agrega como amigo del usuario actual. La amistad es recíproca, es decir, si el usuario actual agrega 
+como amigo a otro usuario, entonces el otro usuario también debe agregar como amigo al usuario actual.
+
+mostrar_amigos(self): Este método devuelve una lista con los nombres de todos los amigos del usuario.
+
+mostrar_muro(self): Este método devuelve una lista con los posts del usuario, ordenados de más nuevo 
+a más viejo.
+
+Recuerda que al implementar la clase FacebookUser, debes validar los parámetros recibidos y lanzar 
+las excepciones correspondientes si es necesario. Además, asegúrate de mantener el registro adecuado 
+de los amigos y los posts en el muro del usuario.
+
+---------------------------------------------------------------------------------------------------------------
+Ejercicio 006
+
+Modelar en Python:
+
+Debes implementar dos clases: App y Smartphone.
+
+La clase App debe permitir crear aplicaciones con su nombre y una lista de sistemas operativos soportados.
+
+La clase Smartphone debe permitir crear smartphones con su nombre de modelo y su nombre de sistema operativo. 
+Además, debe ser capaz de instalar apps, almacenando la instancia de la App correspondiente.
+
+Los objetos instanciados de ambas clases deberán cumplir con el siguiente comportamiento:
+
+# Crear objetos App
+app_fb = App("Facebook", ["ios", "android"])
+app_tw = App("Twitter", ["ios", "android"])
+app_itunes = App("iTunes", ["ios"])
+
+# Crear objetos Smartphone
+nexus = Smartphone("Nexus 6P", "android")
+iphone = Smartphone("iPhone 7", "ios")
+
+# Instalar apps en smartphones
+nexus.instalar(app_itunes)
+iphone.instalar(app_itunes)
+
+# Intentar instalar apps incompatibles
+try:
+    nexus.instalar(app_tw)
+except Exception as e:
+    print(e)  # Salida: "La app no es compatible con el sistema operativo"
+
+# Instalar apps en smartphones
+nexus.instalar(app_fb)
+iphone.instalar(app_tw)
+
+# Intentar instalar una app ya instalada
+try:
+    nexus.instalar(app_fb)
+except Exception as e:
+    print(e)  # Salida: "La app ya está instalada"
+
+# Mostrar información de los smartphones
+print(nexus)  # Salida: "Nexus 6P (android). Apps: iTunes, Facebook"
+print(iphone)  # Salida: "iPhone 7 (ios). Apps: iTunes, Twitter"
+
+---------------------------------------------------------------------------------------------------------------
+Ejercicio 007
+
+Implementa la clase Botella que permita crear botellas con una capacidad máxima especificada en centímetros 
+cúbicos (cc). Esta clase debe cumplir con el siguiente comportamiento:
+
+Al crear una botella, se debe proporcionar su capacidad máxima en cc.
+
+La botella debe tener un método llamado cargar(cantidad) que permita agregar líquido a la botella. 
+Si al cargar la cantidad especificada se supera la capacidad máxima de la botella, se debe lanzar una excepción 
+con el mensaje "La botella no cuenta con capacidad suficiente".
+
+La botella debe tener un método llamado servir(cantidad) que permita extraer líquido de la botella. Si al servir 
+la cantidad especificada se supera la cantidad actual de líquido en la botella, se debe lanzar una excepción 
+con el mensaje "La botella no cuenta con carga suficiente".
+
+La botella debe tener un método llamado esta_vacia() que devuelva True si la botella está vacía 
+(es decir, no tiene líquido) y False en caso contrario.
+
+Al imprimir una instancia de la clase Botella utilizando la función print, se debe mostrar la cantidad actual 
+de líquido en la botella y su capacidad máxima en el siguiente formato: 
+
+"Botella: cantidad_actual/capacidad_maxima cc".
+
+Ejemplo de uso:
+
+botella = Botella(500)
+print(botella)  # Salida: "Botella: 0/500cc"
+
+botella.cargar(300)
+print(botella)  # Salida: "Botella: 300/500cc"
+
+botella.servir(200)
+print(botella)  # Salida: "Botella: 100/500cc"
+
+print(botella.esta_vacia())  # Salida: False
+
+botella.cargar(300)  # Se lanza una excepción: "La botella no cuenta con capacidad suficiente"
+
+botella.servir(200)
+print(botella)  # Salida: "Botella: 100/500cc"
+
+---------------------------------------------------------------------------------------------------------------
+Ejercicio 008
+
+Modelar un perchero para colgar ropa
+
+Se requiere modelar un perchero para colgar ropa, implementando las clases Perchero y Prenda. La clase Perchero 
+debe ser inicializada con la cantidad de espacio total disponible, mientras que la clase Prenda debe ser 
+inicializada con el nombre de la prenda y el espacio que ocupa en el perchero.
+
+A continuación, se presentan las acciones que deben poder llevarse a cabo y los resultados esperados:
+
+# Crear un perchero con 3 espacios disponibles
+p = Perchero(3)
+
+# Colgar una prenda "camisa" que ocupa 1 espacio
+p.colgar(Prenda('camisa', 1))
+
+# Colgar una prenda "pantalon" que ocupa 1 espacio
+p.colgar(Prenda('pantalon', 1))
+
+# Sacar la prenda "pantalon" del perchero
+p.sacar('pantalon')  # Salida: Prenda('pantalon', 1)
+
+# Intentar sacar la prenda "remera" que no está en el perchero
+p.sacar('remera')  # Salida: Exception("No se encontró la prenda")
+
+# Mostrar el espacio disponible en el perchero
+p.espacio_disponible()  # Salida: 2
+
+# Intentar colgar una prenda "campera" que ocupa 3 espacios (más de lo disponible)
+p.colgar(Prenda('campera', 3))  # Salida: Exception("No hay espacio para colgar la prenda")
+
+La clase Perchero debe permitir colgar prendas siempre que haya espacio suficiente. Al intentar sacar una 
+prenda que no está en el perchero, se debe lanzar una excepción. Además, el método espacio_disponible() 
+debe mostrar la cantidad de espacio disponible en el perchero después de colgar o sacar prendas.
+
+---------------------------------------------------------------------------------------------------------------
+Ejercicio 009
+
+Se solicita implementar dos clases: Biblioteca y Libro.
+
+La clase Libro debe tener los siguientes métodos:
+
+obtener_autor(): Devuelve una cadena de caracteres que representa el autor del libro.
+obtener_titulo(): Devuelve una cadena de caracteres que representa el título del libro.
+La clase Biblioteca debe tener los siguientes métodos:
+
+agregar_libro(libro): Recibe un objeto de la clase Libro y lo agrega a la colección de la biblioteca.
+
+sacar_libro(titulo, autor): Recibe el nombre de un título y el nombre de un autor. Si los datos coinciden 
+con algún libro agregado en la biblioteca, se saca el libro y se devuelve el objeto Libro. 
+En caso de que los datos no correspondan con algún libro, se debe levantar una excepción.
+
+contiene_libro(titulo, autor): Recibe el nombre de un título y el nombre de un autor. Devuelve True si el 
+libro está en la colección de la biblioteca, o False si no se encuentra.
+
+Ejemplo de uso:
+
+# Crear objeto Libro
+libro1 = Libro("Cien años de soledad", "Gabriel García Márquez")
+
+# Crear objeto Biblioteca
+biblioteca = Biblioteca()
+
+# Agregar libro a la biblioteca
+biblioteca.agregar_libro(libro1)
+
+# Verificar si la biblioteca contiene el libro
+print(biblioteca.contiene_libro("Cien años de soledad", "Gabriel García Márquez"))  # Salida: True
+
+# Sacar libro de la biblioteca
+libro_sacado = biblioteca.sacar_libro("Cien años de soledad", "Gabriel García Márquez")
+
+# Verificar si la biblioteca contiene el libro después de sacarlo
+print(biblioteca.contiene_libro("Cien años de soledad", "Gabriel García Márquez"))  # Salida: False
+
+---------------------------------------------------------------------------------------------------------------
+Ejercicio 010
+
+Se requiere implementar la clase Partido, que reproduzca el comportamiento siguiente:
+
+La clase Partido debe ser inicializada con dos equipos participantes, representados por sus nombres. Además, 
+debe contar con un atributo para registrar los goles realizados durante el partido.
+
+La clase Partido debe tener los siguientes métodos:
+
+registrar_gol(equipo, jugador): Recibe el nombre del equipo y el nombre del jugador que realizó un gol. 
+Este método debe incrementar el contador de goles para el equipo correspondiente y agregar al jugador a 
+la lista de goleadores del equipo. Si el equipo no es uno de los participantes del partido, se debe lanzar 
+una excepción con el mensaje "El equipo en cuestión no pertenece a este partido".
+
+__str__(): Este método especial debe devolver una representación en cadena del partido, mostrando los 
+nombres de los equipos, la cantidad de goles realizados por cada equipo y los nombres de los jugadores 
+que realizaron los goles para cada equipo.
+
+Ejemplo de uso:
+
+# Crear objeto Partido con dos equipos: "Argentina" y "Polonia"
+partido = Partido("Argentina", "Polonia")
+
+# Registrar un gol para Argentina, realizado por Messi
+partido.registrar_gol("Argentina", "Messi")
+
+# Mostrar la representación en cadena del partido
+print(partido)
+# Salida: Argentina 1 (Messi)
+#         Polonia 0
+
+# Registrar más goles para Argentina y Polonia
+partido.registrar_gol("Argentina", "Martinez")
+partido.registrar_gol("Argentina", "Messi")
+partido.registrar_gol("Polonia", "Lewandowski")
+
+# Intentar registrar un gol para el equipo "Mexico" (que no es uno de los participantes)
+try:
+    partido.registrar_gol("Mexico", "Funes Mori")
+except ValueError as e:
+    print(e)  # Salida: "El equipo en cuestión no pertenece a este partido"
+
+# Mostrar la representación en cadena actualizada del partido
+print(partido)
+# Salida: Argentina 3 (Messi, Martinez, Messi)
+#         Polonia 1 (Lewandowski)
+
+---------------------------------------------------------------------------------------------------------------
+Ejercicio 011
+
+Implementa la clase Estudiante que contenga los siguientes atributos y métodos:
+
+Atributos:
+
+nombre: una cadena de caracteres que representa el nombre del estudiante.
+promedio: un número que representa el promedio de calificaciones del estudiante.
+Métodos:
+
+__init__(self, nombre, promedio): Constructor de la clase que inicializa los atributos nombre y promedio.
+aprobo(self): Devuelve True si el estudiante aprobó el curso (si su promedio es mayor o igual a 6) o False 
+en caso contrario.
+
+Luego, implementa la clase Curso con los siguientes métodos:
+
+__init__(self): Constructor de la clase que inicializa una lista vacía para almacenar los estudiantes inscritos.
+
+agregar_estudiante(self, estudiante): Recibe un objeto de la clase Estudiante y lo agrega a la lista de 
+estudiantes inscritos en el curso.
+
+aprobar_curso(self): Devuelve una lista con los nombres de los estudiantes que aprobaron el curso 
+(su promedio es mayor o igual a 6).
+
+Ejemplo de uso:
+
+# Crear objeto Estudiante con nombre "Juan" y promedio 7.5
+estudiante1 = Estudiante("Juan", 7.5)
+
+# Crear objeto Curso
+curso1 = Curso()
+
+# Agregar estudiante al curso
+curso1.agregar_estudiante(estudiante1)
+
+# Crear otro objeto Estudiante con nombre "María" y promedio 5.8
+estudiante2 = Estudiante("María", 5.8)
+
+# Agregar otro estudiante al curso
+curso1.agregar_estudiante(estudiante2)
+
+# Obtener lista de estudiantes aprobados en el curso
+print(curso1.aprobar_curso())  # Salida: ["Juan"]
+
+---------------------------------------------------------------------------------------------------------------
+Ejercicio 012
+
+Implementa la clase Pelicula que contenga los siguientes atributos y métodos:
+
+Atributos:
+
+titulo: una cadena de caracteres que representa el título de la película.
+duracion: un número que representa la duración de la película en minutos.
+Métodos:
+
+__init__(self, titulo, duracion): Constructor de la clase que inicializa los atributos titulo y duracion.
+Luego, implementa la clase Cine con los siguientes métodos:
+
+Métodos:
+
+__init__(self, nombre): Constructor de la clase que inicializa una lista vacía para almacenar las 
+películas que proyectará el cine.
+
+agregar_pelicula(self, pelicula): Recibe un objeto de la clase Pelicula y lo agrega a la lista de películas 
+que proyectará el cine.
+
+duracion_total(self): Devuelve la duración total de todas las películas que proyectará el cine 
+(suma de las duraciones).
+
+pelicula_mas_larga(self): Devuelve el título de la película más larga que proyectará el cine.
+
+Ejemplo de uso:
+
+# Crear objeto Pelicula con título "Avengers: Endgame" y duración 181 minutos
+pelicula1 = Pelicula("Avengers: Endgame", 181)
+
+# Crear objeto Cine con nombre "CineCity"
+cine1 = Cine("CineCity")
+
+# Agregar película al cine
+cine1.agregar_pelicula(pelicula1)
+
+# Crear otro objeto Pelicula con título "Jurassic Park" y duración 127 minutos
+pelicula2 = Pelicula("Jurassic Park", 127)
+
+# Agregar otra película al cine
+cine1.agregar_pelicula(pelicula2)
+
+# Obtener la duración total de las películas del cine
+print(cine1.duracion_total())  # Salida: 308
+
+# Obtener el título de la película más larga del cine
+print(cine1.pelicula_mas_larga())  # Salida: "Avengers: Endgame"
+
+---------------------------------------------------------------------------------------------------------------
+Ejercicio 013
+
+Implementa la clase Cliente que contenga los siguientes atributos y métodos:
+
+Atributos:
+
+nombre: una cadena de caracteres que representa el nombre del cliente.
+saldo: un número que representa el saldo disponible en la cuenta del cliente.
+Métodos:
+
+__init__(self, nombre, saldo): Constructor de la clase que inicializa los atributos nombre y saldo.
+
+realizar_deposito(self, monto): Recibe un número monto y lo suma al saldo del cliente.
+
+realizar_retiro(self, monto): Recibe un número monto y lo resta al saldo del cliente si tiene fondos suficientes. 
+
+Si no hay suficiente saldo, se debe lanzar una excepción con el mensaje "Fondos insuficientes".
+Luego, implementa la clase Banco con los siguientes métodos:
+
+
+__init__(self): Constructor de la clase que inicializa una lista vacía para almacenar los clientes del banco.
+
+agregar_cliente(self, cliente): Recibe un objeto de la clase Cliente y lo agrega a la lista de clientes del banco.
+
+buscar_cliente(self, nombre): Recibe un nombre de cliente y devuelve el objeto Cliente correspondiente si existe 
+en la lista de clientes del banco. Si el cliente no existe, devuelve None.
+
+Ejemplo de uso:
+
+# Crear objeto Cliente con nombre "Ana" y saldo 1000
+cliente1 = Cliente("Ana", 1000)
+
+# Crear objeto Banco
+banco1 = Banco()
+
+# Agregar cliente al banco
+banco1.agregar_cliente(cliente1)
+
+# Realizar depósito para el cliente "Ana"
+cliente1.realizar_deposito(500)
+
+# Realizar retiro para el cliente "Ana"
+cliente1.realizar_retiro(300)
+
+# Intentar realizar retiro con fondos insuficientes
+try:
+    cliente1.realizar_retiro(1200)
+except Exception as e:
+    print(e)  # Salida: "Fondos insuficientes"
+
+# Buscar cliente en el banco por nombre
+cliente_encontrado = banco1.buscar_cliente("Ana")
+print(cliente_encontrado)  # Salida: Cliente("Ana", 1200)
+
+---------------------------------------------------------------------------------------------------------------
+Ejercicio 014
+
+Implementa la clase Triangulo que contenga los siguientes atributos y métodos:
+
+Atributos:
+
+lado1: un número que representa la longitud del primer lado del triángulo.
+lado2: un número que representa la longitud del segundo lado del triángulo.
+lado3: un número que representa la longitud del tercer lado del triángulo.
+Métodos:
+
+__init__(self, lado1, lado2, lado3): Constructor de la clase que inicializa los atributos lado1, lado2 y lado3.
+
+calcular_perimetro(self): Devuelve el perímetro del triángulo (suma de las longitudes de sus lados).
+
+Luego, implementa la clase Calculadora con el siguiente método:
+
+__init__(self): Constructor de la clase que no necesita inicializar atributos.
+
+calcular_area_triangulo(self, triangulo): Recibe un objeto de la clase Triangulo y calcula su área utilizando 
+la fórmula de Herón. Devuelve el área calculada.
+
+****************************************************************************************************************
+****************************************************************************************************************
+****************************************************************************************************************
+NOTA:
+
+la fórmula de Herón es una fórmula matemática utilizada para calcular el área de un triángulo cuando se conocen 
+las longitudes de sus tres lados. Esta fórmula es especialmente útil cuando no se conoce la altura del triángulo 
+o no se puede calcular fácilmente.
+
+Supongamos que tenemos un triángulo con lados de longitudes a, b y c. El área del triángulo (A) 
+se puede calcular utilizando la fórmula de Herón de la siguiente manera:
+
+Primero, calculamos el semiperímetro del triángulo (s). El semiperímetro se define como la mitad 
+del perímetro del triángulo y se calcula mediante la siguiente fórmula:
+
+s = (a + b + c) / 2
+
+Luego, calculamos el área del triángulo (A) utilizando la fórmula de Herón:
+
+A = √(s * (s - a) * (s - b) * (s - c))
+
+Donde:
+
+a, b y c son las longitudes de los lados del triángulo.
+s es el semiperímetro del triángulo.
+√ representa la operación de raíz cuadrada.
+
+Es importante tener en cuenta que la fórmula de Herón se aplica únicamente a triángulos cuyos lados cumplen 
+con la desigualdad triangular, es decir, la suma de las longitudes de dos lados siempre debe ser mayor que 
+la longitud del tercer lado.
+
+Esta fórmula es ampliamente utilizada en geometría y programación para calcular el área de triángulos sin 
+necesidad de conocer la altura o el ángulo entre los lados.
+
+****************************************************************************************************************
+****************************************************************************************************************
+****************************************************************************************************************
+
+Ejemplo de uso:
+
+# Crear objeto Triangulo con lados de longitud 3, 4 y 5
+triangulo1 = Triangulo(3, 4, 5)
+
+# Crear objeto Calculadora
+calculadora1 = Calculadora()
+
+# Calcular el perímetro del triángulo
+print(triangulo1.calcular_perimetro())  # Salida: 12
+
+# Calcular el área del triángulo
+area_triangulo1 = calculadora1.calcular_area_triangulo(triangulo1)
+print(area_triangulo1)  # Salida: 6.0
+
+
+
+
+
+
+
+
+
+
