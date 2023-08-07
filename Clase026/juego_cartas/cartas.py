@@ -1,4 +1,6 @@
-class Carta():
+from abc import ABC,abstractclassmethod
+
+class Carta(ABC):
     def __init__(self, numero: int, palo: int, tapada: bool = False) -> None:
         self.__numero = numero
         self.__palo = palo
@@ -27,9 +29,13 @@ class Carta():
 
     def isDestapada(self) -> bool:
         return not self.isTapada()
+    
 
+    @abstractclassmethod
     def dibujo_numero(self):
         pass
+
+    @abstractclassmethod
 
     def dibujo_palo(self):
         pass
